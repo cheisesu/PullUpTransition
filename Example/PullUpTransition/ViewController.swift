@@ -7,18 +7,74 @@
 //
 
 import UIKit
+import PullUpTransition
 
 class ViewController: UIViewController {
+    private var transition: PanelTransition!
+    private weak var trash: UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override var description: String {
+        return self.debugDescription
     }
 
+    override var debugDescription: String {
+        return "ViewController"
+    }
+
+    @IBAction
+    private func buttonHandler() {
+        let draggingView = UIView()
+        draggingView.translatesAutoresizingMaskIntoConstraints = false
+        draggingView.backgroundColor = .green
+        draggingView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        self.transition = PanelTransition(isInteractive: true, draggingView: draggingView)
+
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = main.instantiateViewController(withIdentifier: "ContentController") as? ContentController else {
+            return
+        }
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = transition
+
+        self.transition.percentHandler = vc.percentHandler
+
+        self.present(vc, animated: true, completion: nil)
+    }
+
+    @IBAction
+    private func buttonHandler2() {
+        self.transition = PanelTransition(isInteractive: true)
+
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = main.instantiateViewController(withIdentifier: "ContentController2") as? ContentController2 else {
+            return
+        }
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = transition
+
+        self.transition.percentHandler = vc.percentHandler
+
+        self.present(vc, animated: true, completion: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "trash" else { return }
+        trash = segue.destination
+        let buttons = segue.destination.view.subviews.compactMap { $0 as? UIButton }
+        let button1 = buttons.first(where: { $0.title(for: .normal) == "Open 1" })
+        let button2 = buttons.first(where: { $0.title(for: .normal) == "Open 2" })
+        button1?.addTarget(self, action: #selector(buttonHandler), for: .touchUpInside)
+        button2?.addTarget(self, action: #selector(buttonHandler2), for: .touchUpInside)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(presentingViewController)
+    }
 }
 

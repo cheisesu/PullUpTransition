@@ -12,7 +12,7 @@ class BackgroundPresentationController: PresentationController {
         
         if dismissalOutside {
             let tap = UITapGestureRecognizer(target: self, action: #selector(dismissHandler(_:)))
-            tap.name = "SubstratedPresentationController.TapDismiss"
+            tap.name = "BackgroundPresentationController.TapDismiss"
             view.addGestureRecognizer(tap)
         }
     }

@@ -1,10 +1,3 @@
-//
-//  PopUpExtensions.swift
-//  PopUp
-//
-//  Created by Дмитрий Шелонин on 10.01.2021.
-//
-
 import UIKit
 
 extension UIPanGestureRecognizer {

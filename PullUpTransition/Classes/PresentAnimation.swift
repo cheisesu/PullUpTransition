@@ -1,10 +1,3 @@
-//
-//  PresentAnimation.swift
-//  PopUp
-//
-//  Created by Дмитрий Шелонин on 03.01.2021.
-//
-
 import UIKit
 
 class PresentAnimation: NSObject {
