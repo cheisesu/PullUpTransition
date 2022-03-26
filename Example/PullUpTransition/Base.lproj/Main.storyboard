@@ -204,7 +204,6 @@ popupShouldDismissInteractivel</string>
                         <outlet property="percentLabel" destination="fo4-Ln-cPk" id="jUf-JX-1AJ"/>
                         <outlet property="scrollView" destination="7aN-3s-Pse" id="kPR-Be-sYe"/>
                         <outlet property="view" destination="XYv-iP-9Ag" id="2ez-m0-gDG"/>
-                        <outlet property="viewForDragging" destination="fo4-Ln-cPk" id="hiD-ii-Kdg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgt-Qt-cgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

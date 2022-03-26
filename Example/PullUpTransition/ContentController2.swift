@@ -18,24 +18,6 @@ final class ContentController2: UIViewController {
         print("\(state)")
         self?.percentLabel.text = "\(state)"
     }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override var description: String {
-        return self.debugDescription
-    }
-    
-    override var debugDescription: String {
-        return "ContentController2"
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        print("== \(presentingViewController)")
-    }
     
     @IBAction
     private func closeHandler() {
@@ -48,12 +30,3 @@ extension ContentController2: HideTransitionDraggingViewProvider {
         return self.viewForDragging
     }
 }
-
-//extension ContentController2: ContentSizeGetter {
-//    func frameSize(in containerFrame: CGRect, with dragThickness: CGFloat) -> CGSize {
-//        var size = CGSize(width: containerFrame.width, height: 0.7 * containerFrame.height)
-//        size.height -= dragThickness
-//        
-//        return size
-//    }
-//}

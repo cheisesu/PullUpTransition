@@ -13,20 +13,7 @@ class ViewController: UIViewController {
     private var transition: PanelTransition!
     private weak var trash: UIViewController?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override var description: String {
-        return self.debugDescription
-    }
-
-    override var debugDescription: String {
-        return "ViewController"
-    }
-
-    @IBAction
+    @objc
     private func buttonHandler() {
         let draggingView = UIView()
         draggingView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +33,7 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
-    @IBAction
+    @objc
     private func buttonHandler2() {
         self.transition = PanelTransition(isInteractive: true)
 
@@ -70,11 +57,6 @@ class ViewController: UIViewController {
         let button2 = buttons.first(where: { $0.title(for: .normal) == "Open 2" })
         button1?.addTarget(self, action: #selector(buttonHandler), for: .touchUpInside)
         button2?.addTarget(self, action: #selector(buttonHandler2), for: .touchUpInside)
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(presentingViewController)
     }
 }
 
