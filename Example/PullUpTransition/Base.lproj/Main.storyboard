@@ -226,13 +226,19 @@ popupShouldDismissInteractivel</string>
                                 <rect key="frame" x="162.5" y="356.5" width="50" height="30"/>
                                 <state key="normal" title="Open 2"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUS-vq-sDa">
+                                <rect key="frame" x="162" y="394" width="51" height="30"/>
+                                <state key="normal" title="Open 3"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ltd-zx-oEw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="la5-F9-ef1" firstAttribute="centerX" secondItem="REb-0t-Roq" secondAttribute="centerX" id="0Q5-pH-fEX"/>
                             <constraint firstItem="cpX-yI-gKN" firstAttribute="centerY" secondItem="REb-0t-Roq" secondAttribute="centerY" id="4ay-Ix-9N7"/>
+                            <constraint firstItem="bUS-vq-sDa" firstAttribute="top" secondItem="la5-F9-ef1" secondAttribute="bottom" constant="7.5" id="60A-Ep-Bbg"/>
                             <constraint firstItem="cpX-yI-gKN" firstAttribute="centerX" secondItem="REb-0t-Roq" secondAttribute="centerX" id="L6u-EJ-fUG"/>
+                            <constraint firstItem="bUS-vq-sDa" firstAttribute="centerX" secondItem="REb-0t-Roq" secondAttribute="centerX" id="gpW-vl-4i7"/>
                             <constraint firstItem="la5-F9-ef1" firstAttribute="top" secondItem="cpX-yI-gKN" secondAttribute="bottom" constant="8" symbolic="YES" id="mug-SQ-JX5"/>
                         </constraints>
                     </view>
