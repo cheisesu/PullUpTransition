@@ -1,9 +1,10 @@
 import UIKit
 
+@objc
 public final class PanelTransition: NSObject {
     private let hideDriver: HideTransitionDriver = HideTransitionDriver()
     private let duration: TimeInterval
-    private let substrate: Substrate
+    private let background: BackgroundType
     private let isInteractive: Bool
     private let dismissalOutside: Bool
     private var draggingView: UIView?
@@ -16,18 +17,50 @@ public final class PanelTransition: NSObject {
     //TODO: добавить направления
     //TODO: добавить вьюху для тяги
     
-    init(duration: TimeInterval = 0.3,
+    public init(duration: TimeInterval = 0.3,
          isInteractive: Bool = true,
          dismissalOutside: Bool = true,
-         substrate: Substrate = .color(UIColor.black.withAlphaComponent(0.3)),
+         background: BackgroundType = .color(.black.withAlphaComponent(0.6)),
          draggingView: UIView? = nil) {
         self.duration = duration
         self.isInteractive = isInteractive
         self.dismissalOutside = dismissalOutside
-        self.substrate = substrate
+        self.background = background
         self.draggingView = draggingView
         
         super.init()
+    }
+
+    @objc
+    public convenience init(duration: TimeInterval = 0.3,
+                            isInteractive: Bool = true,
+                            dismissalOutside: Bool = true,
+                            draggingView: UIView? = nil) {
+        self.init(duration: duration, isInteractive: isInteractive,
+                  dismissalOutside: dismissalOutside, background: .none,
+                  draggingView: draggingView)
+    }
+
+    @objc
+    public convenience init(duration: TimeInterval = 0.3,
+                            isInteractive: Bool = true,
+                            dismissalOutside: Bool = true,
+                            backgroundColor: UIColor = .black.withAlphaComponent(0.6),
+                            draggingView: UIView? = nil) {
+        self.init(duration: duration, isInteractive: isInteractive,
+                  dismissalOutside: dismissalOutside, background: .color(backgroundColor),
+                  draggingView: draggingView)
+    }
+
+    @objc
+    public convenience init(duration: TimeInterval = 0.3,
+                            isInteractive: Bool = true,
+                            dismissalOutside: Bool = true,
+                            backgroundView: UIView,
+                            draggingView: UIView? = nil) {
+        self.init(duration: duration, isInteractive: isInteractive,
+                  dismissalOutside: dismissalOutside, background: .custom(backgroundView),
+                  draggingView: draggingView)
     }
 }
 
@@ -39,19 +72,19 @@ extension PanelTransition: UIViewControllerTransitioningDelegate {
             self.hideDriver.link(to: presented, with: self.draggingView)
         }
         
-        switch self.substrate {
+        switch self.background {
         case .none:
             return PresentationController(with: self.draggingView,
                                           presentedViewController: presented,
                                           presenting: presenting ?? source)
         case let .color(color):
-            return SubstratedPresentationController(with: .emptyView(with: color),
+            return BackgroundPresentationController(with: .emptyView(with: color),
                                                     with: self.draggingView,
                                                     presentedViewController: presented,
                                                     presenting: presenting ?? source)
         case let .custom(view):
             view.alpha = 0
-            return SubstratedPresentationController(with: view,
+            return BackgroundPresentationController(with: view,
                                                     with: self.draggingView,
                                                     presentedViewController: presented,
                                                     presenting: presenting ?? source)

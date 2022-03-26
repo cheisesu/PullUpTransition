@@ -8,7 +8,8 @@ public protocol ContentSizeGetter: AnyObject {
 class PresentationController: UIPresentationController {
     private let draggingView: UIView?
     
-    init(with draggingView: UIView? = nil, presentedViewController: UIViewController, presenting: UIViewController?) {
+    init(with draggingView: UIView? = nil, presentedViewController: UIViewController,
+         presenting: UIViewController?) {
         self.draggingView = draggingView
         
         super.init(presentedViewController: presentedViewController, presenting: presenting)

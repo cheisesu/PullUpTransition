@@ -1,6 +1,6 @@
 import UIKit
 
-class SubstratedPresentationController: PresentationController {
+class BackgroundPresentationController: PresentationController {
     private let substrateView: UIView
     
     init(with view: UIView, dismissalOutside: Bool = true,

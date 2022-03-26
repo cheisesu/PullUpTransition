@@ -10,7 +10,7 @@
 		1493453955B7C6029750AD81D0242C2F /* Pods-PullUpTransition_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2175404D43E9E5CFF0D5C8CF66E49F57 /* Pods-PullUpTransition_Example-dummy.m */; };
 		2DA861F6FE8E77CF298077479AE8BE76 /* PopUpExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA66B94225D805E8F91D4A8FF2F117E /* PopUpExtensions.swift */; };
 		3B9FD48E764FCE7AEFC77DEDA520A4F9 /* PanelTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63B5F76E489F78BBF25158417B6D6C /* PanelTransition.swift */; };
-		3D67395B82BAB2394352916DA65990F4 /* SubstratedPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E3E2FDEDC6D1320B5D8CBD23B5F15 /* SubstratedPresentationController.swift */; };
+		3D67395B82BAB2394352916DA65990F4 /* BackgroundPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E3E2FDEDC6D1320B5D8CBD23B5F15 /* BackgroundPresentationController.swift */; };
 		701930336C0AE800167C0F999202A8AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		71F52CD9F483E063EAFC214C34C529D2 /* HideTransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF6F20B341573BA254C73FC1E4F4A3 /* HideTransitionDriver.swift */; };
 		830E629C1EBADBF4BBE55B33C84F6078 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621852EF62BDAA45C14A531F8727D32B /* PresentationController.swift */; };
@@ -18,7 +18,7 @@
 		B201E75FAE572A517B75D68B33EA1F9A /* PullUpTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB248355F9E5633E5CC1CA6B218CCA03 /* PullUpTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C698F3AFF68AA64C3DE811B7BBE45796 /* Pods-PullUpTransition_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0406DA830DC952DC37405676F350267A /* Pods-PullUpTransition_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8ADA045F918434F9F7F591355A53CC5 /* DismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FED745459E057E7F9166EBD86842700 /* DismissAnimation.swift */; };
-		DEDC7E3E9C881383A71779970833E554 /* Substrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0AC6CC0BA2E3171C5FE8986D629D7 /* Substrate.swift */; };
+		DEDC7E3E9C881383A71779970833E554 /* BackgroundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0AC6CC0BA2E3171C5FE8986D629D7 /* BackgroundType.swift */; };
 		E4ACC7DC8AC797D150373815EDFCCAD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EB9E304E87341787D21A638296C22792 /* PresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8D1DC34E3C973514D567BA0086F49 /* PresentAnimation.swift */; };
 /* End PBXBuildFile section */
@@ -36,29 +36,29 @@
 /* Begin PBXFileReference section */
 		03FD4683FD3C8942E8E014D7DEC01456 /* PullUpTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PullUpTransition-prefix.pch"; sourceTree = "<group>"; };
 		0406DA830DC952DC37405676F350267A /* Pods-PullUpTransition_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PullUpTransition_Example-umbrella.h"; sourceTree = "<group>"; };
-		136560ABD04238DF1A12F06F1A25C9D6 /* PullUpTransition.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PullUpTransition.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		136560ABD04238DF1A12F06F1A25C9D6 /* PullUpTransition.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PullUpTransition.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1D1A1209F6EEA69D9629C7AD80BC698F /* Pods-PullUpTransition_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PullUpTransition_Example"; path = Pods_PullUpTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E15493DC02CD6E2F97C069E59316EEA /* PullUpTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PullUpTransition.modulemap; sourceTree = "<group>"; };
 		2175404D43E9E5CFF0D5C8CF66E49F57 /* Pods-PullUpTransition_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PullUpTransition_Example-dummy.m"; sourceTree = "<group>"; };
-		2F63E740FBF797935B9DED7A6BE646A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2F63E740FBF797935B9DED7A6BE646A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		31381CD8737F23B1388E434A411E801D /* Pods-PullUpTransition_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PullUpTransition_Example.release.xcconfig"; sourceTree = "<group>"; };
 		35570494ECE96F0B71926162D7D35E66 /* PullUpTransition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PullUpTransition.debug.xcconfig; sourceTree = "<group>"; };
 		4B184DD9CA979F0F7C10A5781EEAB46A /* PullUpTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PullUpTransition-dummy.m"; sourceTree = "<group>"; };
 		5881A58082546776DF3543FD3F44E985 /* Pods-PullUpTransition_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PullUpTransition_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5FFA21A0DED3ED61924181EDE9097909 /* Pods-PullUpTransition_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PullUpTransition_Example-Info.plist"; sourceTree = "<group>"; };
 		621852EF62BDAA45C14A531F8727D32B /* PresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
-		66E0AC6CC0BA2E3171C5FE8986D629D7 /* Substrate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Substrate.swift; path = PullUpTransition/Classes/Substrate.swift; sourceTree = "<group>"; };
+		66E0AC6CC0BA2E3171C5FE8986D629D7 /* BackgroundType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundType.swift; path = PullUpTransition/Classes/BackgroundType.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		73C2C06F65A9346BA62C43D0A17B90FF /* PullUpTransition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PullUpTransition.release.xcconfig; sourceTree = "<group>"; };
 		7730917389272CA2BFC5CE1151B0DE7B /* Pods-PullUpTransition_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PullUpTransition_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8FED745459E057E7F9166EBD86842700 /* DismissAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DismissAnimation.swift; path = PullUpTransition/Classes/DismissAnimation.swift; sourceTree = "<group>"; };
 		9C455190650C2A4D27D6D18E7BBD393E /* Pods-PullUpTransition_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PullUpTransition_Example.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AEDF6F20B341573BA254C73FC1E4F4A3 /* HideTransitionDriver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HideTransitionDriver.swift; path = PullUpTransition/Classes/HideTransitionDriver.swift; sourceTree = "<group>"; };
 		C1447082CF68C9C92241F9DF5AF6AC37 /* Pods-PullUpTransition_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PullUpTransition_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C23D6181ABE596E1FCE0F2B7CF8748A5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C23D6181ABE596E1FCE0F2B7CF8748A5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CB248355F9E5633E5CC1CA6B218CCA03 /* PullUpTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PullUpTransition-umbrella.h"; sourceTree = "<group>"; };
-		D06E3E2FDEDC6D1320B5D8CBD23B5F15 /* SubstratedPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubstratedPresentationController.swift; sourceTree = "<group>"; };
+		D06E3E2FDEDC6D1320B5D8CBD23B5F15 /* BackgroundPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackgroundPresentationController.swift; sourceTree = "<group>"; };
 		D13D77CD2BF4D0D704B7E1A61288716A /* PullUpTransition-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PullUpTransition-Info.plist"; sourceTree = "<group>"; };
 		D422095C3C2247F0B5AB401B3A832F6D /* Pods-PullUpTransition_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PullUpTransition_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DAF8D1DC34E3C973514D567BA0086F49 /* PresentAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentAnimation.swift; path = PullUpTransition/Classes/PresentAnimation.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 				FD63B5F76E489F78BBF25158417B6D6C /* PanelTransition.swift */,
 				ECA66B94225D805E8F91D4A8FF2F117E /* PopUpExtensions.swift */,
 				DAF8D1DC34E3C973514D567BA0086F49 /* PresentAnimation.swift */,
-				66E0AC6CC0BA2E3171C5FE8986D629D7 /* Substrate.swift */,
+				66E0AC6CC0BA2E3171C5FE8986D629D7 /* BackgroundType.swift */,
 				C695901DB0F56D88E9DC90ECC7342741 /* Pod */,
 				684C967A6F174ECE93B20EE6B65C6FCB /* PresentationControllers */,
 				F33F69370C4B8E38F4C7685B7F1845B6 /* Support Files */,
@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				621852EF62BDAA45C14A531F8727D32B /* PresentationController.swift */,
-				D06E3E2FDEDC6D1320B5D8CBD23B5F15 /* SubstratedPresentationController.swift */,
+				D06E3E2FDEDC6D1320B5D8CBD23B5F15 /* BackgroundPresentationController.swift */,
 			);
 			name = PresentationControllers;
 			path = PullUpTransition/Classes/PresentationControllers;
@@ -332,8 +332,8 @@
 				EB9E304E87341787D21A638296C22792 /* PresentAnimation.swift in Sources */,
 				830E629C1EBADBF4BBE55B33C84F6078 /* PresentationController.swift in Sources */,
 				9143E2BB7749C20E6D5EDD2285E73AE7 /* PullUpTransition-dummy.m in Sources */,
-				DEDC7E3E9C881383A71779970833E554 /* Substrate.swift in Sources */,
-				3D67395B82BAB2394352916DA65990F4 /* SubstratedPresentationController.swift in Sources */,
+				DEDC7E3E9C881383A71779970833E554 /* BackgroundType.swift in Sources */,
+				3D67395B82BAB2394352916DA65990F4 /* BackgroundPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,8 +504,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
