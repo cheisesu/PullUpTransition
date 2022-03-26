@@ -1,6 +1,5 @@
 import UIKit
 
-@objc
 public final class PanelTransition: NSObject {
     private let hideDriver: HideTransitionDriver = HideTransitionDriver()
     private let duration: TimeInterval
@@ -15,7 +14,6 @@ public final class PanelTransition: NSObject {
     }
 
     //TODO: добавить направления
-    //TODO: добавить вьюху для тяги
     
     public init(duration: TimeInterval = 0.3,
          isInteractive: Bool = true,
@@ -29,38 +27,6 @@ public final class PanelTransition: NSObject {
         self.draggingView = draggingView
         
         super.init()
-    }
-
-    @objc
-    public convenience init(duration: TimeInterval = 0.3,
-                            isInteractive: Bool = true,
-                            dismissalOutside: Bool = true,
-                            draggingView: UIView? = nil) {
-        self.init(duration: duration, isInteractive: isInteractive,
-                  dismissalOutside: dismissalOutside, background: .none,
-                  draggingView: draggingView)
-    }
-
-    @objc
-    public convenience init(duration: TimeInterval = 0.3,
-                            isInteractive: Bool = true,
-                            dismissalOutside: Bool = true,
-                            backgroundColor: UIColor = .black.withAlphaComponent(0.6),
-                            draggingView: UIView? = nil) {
-        self.init(duration: duration, isInteractive: isInteractive,
-                  dismissalOutside: dismissalOutside, background: .color(backgroundColor),
-                  draggingView: draggingView)
-    }
-
-    @objc
-    public convenience init(duration: TimeInterval = 0.3,
-                            isInteractive: Bool = true,
-                            dismissalOutside: Bool = true,
-                            backgroundView: UIView,
-                            draggingView: UIView? = nil) {
-        self.init(duration: duration, isInteractive: isInteractive,
-                  dismissalOutside: dismissalOutside, background: .custom(backgroundView),
-                  draggingView: draggingView)
     }
 }
 
