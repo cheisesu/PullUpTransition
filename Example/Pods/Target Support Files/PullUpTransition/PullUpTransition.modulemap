@@ -1,0 +1,6 @@
+framework module PullUpTransition {
+  umbrella header "PullUpTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}

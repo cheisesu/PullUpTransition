@@ -21,14 +21,13 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Dmitry Shelonin/PullUpTransition'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/cheisesu/PullUpTransition'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Dmitry Shelonin' => 'cheisesu@gmail.com' }
-  s.source           = { :git => 'https://github.com/Dmitry Shelonin/PullUpTransition.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/cheisesu/PullUpTransition.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
+  s.swift_version = '5'
 
   s.source_files = 'PullUpTransition/Classes/**/*'
   

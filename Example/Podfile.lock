@@ -1,0 +1,16 @@
+PODS:
+  - PullUpTransition (0.1.0)
+
+DEPENDENCIES:
+  - PullUpTransition (from `../`)
+
+EXTERNAL SOURCES:
+  PullUpTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PullUpTransition: 0ad46ec08f270557abb9fd1afcea12217df9723f
+
+PODFILE CHECKSUM: 5b476517ff391bfc42b52f632aa4f4101a339ea8
+
+COCOAPODS: 1.11.2
