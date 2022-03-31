@@ -17,6 +17,7 @@ struct SwiftUIView: View {
         VStack {
             Text("Hello")
             TextField("Input sumthing", text: $text)
+            Spacer(minLength: 200)
             Button("Just press me to dismiss", action: dismiss)
         }
         .padding()

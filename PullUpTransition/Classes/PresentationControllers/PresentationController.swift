@@ -21,7 +21,7 @@ class PresentationController: UIPresentationController {
     
     override var frameOfPresentedViewInContainerView: CGRect {
         var bounds = self.containerView?.bounds ?? .zero
-        bounds = bounds.inset(by: self.containerView?.safeAreaInsets ?? .zero)
+//        bounds = bounds.inset(by: self.containerView?.safeAreaInsets ?? .zero)
 
         // reducing bounds for dragging view
         if let draggingView = draggingView {
@@ -40,9 +40,8 @@ class PresentationController: UIPresentationController {
 //            let targetSize = UIView.layoutFittingCompressedSize
             let targetSize = bounds.size
             size = self.presentedView?.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel) ?? bounds.size
-            size.width = min(bounds.width, size.width)
+            size.width = bounds.width
             size.height = min(bounds.height, size.height)
-            print("\(self.presentedViewController) \(targetSize) \(size)")
         }
         
         let top = bounds.maxY - size.height
@@ -65,7 +64,6 @@ class PresentationController: UIPresentationController {
         super.containerViewDidLayoutSubviews()
         let presentedViewFrame = self.frameOfPresentedViewInContainerView
         self.presentedView?.frame = presentedViewFrame
-        print("FRAME \(presentedViewFrame)")
         //TODO: учесть направления
         
         var bounds = self.containerView?.bounds ?? .zero
